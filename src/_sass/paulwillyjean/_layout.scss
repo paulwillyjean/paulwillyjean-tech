@@ -3,3 +3,10 @@
     width: calc(35% - (#{$spacing-unit} / 2));
     float: right;
 }
+
+@include media-query($on-palm) {
+    .footer-col {
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width: calc(100% - (#{$spacing-unit} / 2));
+    }
+}

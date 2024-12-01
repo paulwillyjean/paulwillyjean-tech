@@ -35,9 +35,21 @@ destination: ./_site
 theme: minima
 plugins:
   - jekyll-feed
-
-incremental: true
+incremental: false
 timezone: 'America/Toronto'
+
+# Jekyll Polyglot settings
+languages: 
+  - fr
+  - en
+default_lang: fr
+exclude_from_localization: 
+  - javascript
+  - images
+  - css
+  - public
+parallel_localization: true
+lang_from_path: true
 
 # Serve settings
 hostname: '0.0.0.0'
