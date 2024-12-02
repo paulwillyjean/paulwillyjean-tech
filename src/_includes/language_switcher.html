@@ -1,0 +1,20 @@
+{%- unless site.languages.size <= 1 %}
+  <div class=language-switcher>
+    {%- for language in site.languages -%}
+      {%- if language == site.active_lang -%}
+        <span class="site-language site-language-active site-language-{{- language -}}">{{- language -}}</span>
+      {%- else -%}
+        {%- capture language_url -%}
+          {%- if language == site.default_lang -%}
+          {{- site.baseurl-}} {{- page.permalink_lang[language] -}}
+          {%-  else -%}
+          {{- site.baseurl -}}/{{- language -}} {{- page.permalink_lang[language] -}}
+          {%- endif -%}
+        {%- endcapture -%}
+        <a class="site-language site-language-{{- language -}}" {%- static_href -%}href="{{- language_url -}}"{%- endstatic_href -%} >
+          {{ language }}
+        </a>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+{%- endunless -%}
