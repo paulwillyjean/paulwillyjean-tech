@@ -4,9 +4,16 @@
 
 layout: home
 permalink: /
+lang: fr
+page_id: index
 ---
 
-Bienvenue sur ma page web. Je suis développeur web depuis plus de 10 ans!
-Je me spécialise dans le développement d'applications et d'API webs ainsi que la sécurité.
+## Bienvenue!
 
-J'offre une gamme de services conçus pour aider les entreprises à rejoindre leur clientèle en ligne.
+Je développe des sites web et des APIs depuis +10 ans. Quimporte
+que vous cherchez à développer un site vitrine ou intégrer un service
+de livraison dans votre magasin en ligne, je suis là pour vous aider.
+
+J'offre une panoplie de services pour répondre à vos diverses besoins:
+
+- Développement de sites vitrines

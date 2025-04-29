@@ -4,9 +4,11 @@
 
 layout: home
 permalink: /
+lang: en
+page_id: index
 ---
 
-Welcome on my web page. I'm a web developer with over 10 years of experience under my belt.
-I specialize in web applications, APIs and security.
+## Welcome!
 
+I'm a web developer with over 10 years of experience building secure web applications, APIs.
 I offer a range of services to help businesses establish their presence online.

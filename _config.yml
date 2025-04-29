@@ -23,7 +23,6 @@ description: >- # this means to ignore newlines until "baseurl:"
   Développeur web à votre service
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.paulwillyjean.tech" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: PaulWillyJean
 github_username:  paulwillyjean
 bluesky_username: paulwillyjean.bsky.social
 show_excerpts: false
@@ -39,11 +38,9 @@ incremental: false
 timezone: 'America/Toronto'
 
 # Jekyll Polyglot settings
-languages: 
-  - fr
-  - en
+languages: [ fr, en ]
 default_lang: fr
-exclude_from_localization: 
+exclude_from_localization:
   - javascript
   - images
   - css
@@ -52,7 +49,7 @@ parallel_localization: true
 lang_from_path: true
 
 # Serve settings
-hostname: '0.0.0.0'
+hostname: "0.0.0.0"
 livereload: true
 livereload_min_delay: 5
 
