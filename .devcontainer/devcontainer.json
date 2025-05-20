@@ -12,7 +12,15 @@
 		35729
 	],
 	"postCreateCommand": "bundle install",
-	"postStartCommand": "bundle exec jekyll serve"
+	"postStartCommand": "bundle exec jekyll serve",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"sissel.shopify-liquid",
+				"DavidAnson.vscode-markdownlint"
+			]
+		}
+	}
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
