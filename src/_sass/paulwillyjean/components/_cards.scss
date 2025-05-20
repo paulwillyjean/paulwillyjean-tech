@@ -1,0 +1,22 @@
+.card {
+    --card-body-padding: #{$spacing-unit};
+    --card-border-width: var(--sys-border-width);
+    --card-border-color: var(--sys-border-color);
+
+    display: flex;
+    flex-direction: column;
+    border: var(--card-border-width) solid var(--card-border-color);
+
+    .card-body {
+        padding: var(--card-body-padding);
+    }
+}
+
+.card-group {
+    display: flex;
+    flex-flow: row wrap;
+
+    >.card {
+        flex-basis: 1 0 0;
+    }
+}

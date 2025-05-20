@@ -1,0 +1,36 @@
+@use "sass:map";
+
+@each $selector in("padding", "padding-block", "padding-block-start", "padding-block-end", "padding-inline", "padding-inline-start", "padding-inline-end") {
+    @include make-spacers($selector);
+}
+
+@each $selector in("margin", "margin-block", "margin-block-start", "margin-block-end", "margin-inline", "margin-inline-start", "margin-inline-end") {
+    @include make-spacers($selector);
+}
+
+$displays: (
+    "selector": ".display",
+    "property": font-size,
+    "values": (
+        1: 4rem,
+        2: 2rem,
+        3: 1rem,
+        4: 0.75rem,
+        5: 0.5rem,
+        6: 0.25rem,
+    )
+) !default;
+
+@each $key, $value in map.get($displays, "values") {
+    #{map.get($displays, "selector")}-#{$key} {
+        #{map.get($displays, "property")}: $value;
+    }
+}
+
+.display-flex {
+    display: flex;
+}
+
+.align-items-start {
+    align-items: start;
+}

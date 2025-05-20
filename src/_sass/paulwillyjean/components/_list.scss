@@ -1,0 +1,26 @@
+.list {
+    --list-border-width: var(--sys-border-width);
+    --list-border-color: var(--sys-border-color);
+
+    list-style-type: none;
+
+    .list-item {
+        border: var(--list-border-width) solid var(--list-border-color);
+        padding-block: var(--list-item-padding-block, $spacing-unit * 0.5);
+        padding-inline: var(--list-item-padding-inline, $spacing-unit);
+
+        + .list-item {
+            border-block-start: none;
+        }
+    }
+}
+
+.ordered-list {
+    counter-reset: list-counter;
+
+    & > .list-item:before {
+        counter-increment: list-counter;
+        content: counter(list-counter) ". ";
+        white-space: pre;
+    }
+}

@@ -1,0 +1,48 @@
+body {
+    color: var(--sys-surface-color);
+    background-color: var(--sys-surface-background);
+}
+
+a:is(:any-link, :visited) {
+    color: inherit;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.svg-icon {
+    fill: currentColor;
+    padding-right: 0;
+    margin-right: 5px;
+}
+
+ul, ol {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+%headings {
+    line-height: 1;
+    margin-block-end: $spacing-unit;
+
+    &:not(:first-child) {
+        margin-block-start: $spacing-unit * 2;
+    }
+}
+
+p,
+blockquote,
+pre,
+dl,
+figure,
+%vertical-rhythm {
+    margin-block-end: $spacing-unit * 0.75;
+}

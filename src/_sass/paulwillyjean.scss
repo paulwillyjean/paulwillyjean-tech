@@ -1,9 +1,65 @@
-// @import
-//   "minima/base",
-//   "minima/layout",
-//   "minima/syntax-highlighting"
-// ;
-$base-font-family: Helvetica;
+@charset "utf-8";
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  src:
+    url("/assets/AtkinsonHyperlegibleNextVF-Variable.woff2") format("woff2"),
+    url("/assets/AtkinsonHyperlegibleNextVF-Variable.ttf") format("truetype");
+}
+
+$base-font-family: "Atkinson Hyperlegible Next", Helvetica, sans-serif !default;
+$spacing-unit: 1rem !default;
+$spacers: (
+  none: 0,
+  xs: $spacing-unit * 0.25,
+  s: $spacing-unit * 0.5,
+  sm: $spacing-unit * 0.75, // small medium
+  md: $spacing-unit * 1,
+  lm: $spacing-unit * 1.25, // large medium
+  lg: $spacing-unit * 1.5,
+  xl: $spacing-unit * 1.75,
+  2xl: $spacing-unit * 2,
+  3xl: $spacing-unit * 3,
+  4xl: $spacing-unit * 4,
+) !default;
+$content-width: 1440px !default;
+$on-palm: 600px !default;
+$on-tablet: 800px !default;
+$on-laptop: 1440px !default;
+$breakpoints: (
+  palm: $on-palm,
+  tablet: $on-tablet,
+  laptop: $on-laptop,
+) !default;
+
+$background-color: lch(98.92% 2.48 144.48) !default;
+$text-color: #111 !default;
+$brand-color: $text-color !default;
 
 @import "minima";
-@import "paulwillyjean/layout"
+@import "paulwillyjean/mixins";
+@import "paulwillyjean/base";
+@import "paulwillyjean/layout";
+@import "paulwillyjean/components";
+@import "paulwillyjean/utils";
+
+:root {
+  --ref-light-pastel-green: lch(98.92% 2.48 144.48
+  );
+--ref-emerald-green: lch(78.46% 59.36 149.62);
+--ref-dark-green-orange: lch(25.43% 12.11 93.32);
+--ref-light-red-orange: lch(95.89% 2.35 45.01);
+--ref-red-orange: lch(78.89% 59.35 45.01);
+--ref-dark-red-orange: lch(42.57% 31.56 40.4);
+--ref-white: lch(100% 0.01 296.81);
+
+--sys-text-color: #{$text-color};
+--sys-background-color: #{$background-color};
+--sys-border-width: 1px;
+--sys-border-color: lch(from var(--sys-text-color) l c h / 0.125);
+--sys-brand-color: #{$brand-color};
+--sys-surface-background: var(--sys-background-color);
+--sys-surface-color: #{$text-color};
+--sys-container-background: var(--ref-red-orange);
+--sys-container-color: #{$text-color};
+}

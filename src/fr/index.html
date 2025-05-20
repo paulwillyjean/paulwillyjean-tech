@@ -1,0 +1,47 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: home
+permalink: /
+lang: fr
+page_id: index
+---
+
+<div class="hero-banner container-background padding-block-3xl">
+  <div class="wrapper grid">
+    <hgroup class="grid-col-12 grid-col-tablet-8 grid-start-tablet-4">
+      <h1 class="display-1">Bienvenue!</h1>
+      <p>Je développe des sites web et des APIs depuis +10 ans.</p>
+    </hgroup>
+  </div>
+</div>
+<div class="wrapper">
+  <h2 class="margin-block-start-3xl">Les services</h2>
+  <p>Si vous avez besoin d'un site vitrine ou d'intégrer un service
+      de livraison pour votre magasin en ligne, je suis là pour vous aider.</p>
+  <div class="grid">
+    {%  for service in site.data.services -%}
+      <article class="card container-background grid-col-6 grid-col-laptop-4">
+        <div class="card-body">
+          {{ service.name}}
+        </div>
+      </article>
+    {%- endfor %}
+  </div>
+</div>
+<div class="wrapper">
+  <h2 class="margin-block-start-3xl">L'accompagnement</h2>
+  <p>J'offre une expérience d'accompagnement complète pour répondre à vos besoins:</p>
+
+  <ol class="margin-block-start-lg list ordered-list">
+    {% for experience in site.data.customer_experience -%}
+      <li class="list-item display-flex align-items-start">
+        <article class="customer-experience">
+          <h3 class="customer-experience-name margin-block-end-xs">{{ experience.name }}</h3>
+          <p class="customer-experience-description">{{ experience.description }}</p>
+        </article>
+      </li>
+    {%- endfor %}
+  </ol>
+</div>
