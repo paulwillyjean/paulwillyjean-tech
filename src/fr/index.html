@@ -22,7 +22,7 @@ page_id: index
       de livraison pour votre magasin en ligne, je suis là pour vous aider.</p>
   <div class="grid">
     {%  for service in site.data.services -%}
-      <article class="card container-background grid-col-6 grid-col-laptop-4">
+      <article class="card container-background grid-col-6 grid-col-laptop-3">
         <div class="card-body">
           {{ service.name}}
         </div>
@@ -34,7 +34,7 @@ page_id: index
   <h2 class="margin-block-start-3xl">L'accompagnement</h2>
   <p>J'offre une expérience d'accompagnement complète pour répondre à vos besoins:</p>
 
-  <ol class="margin-block-start-lg list ordered-list">
+  <ol class="margin-block-end-3xl list ordered-list">
     {% for experience in site.data.customer_experience -%}
       <li class="list-item display-flex align-items-start">
         <article class="customer-experience">

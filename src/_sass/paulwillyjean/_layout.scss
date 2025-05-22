@@ -1,3 +1,5 @@
+@use "sass:map";
+
 @import "language-switcher";
 
 * {
@@ -46,6 +48,7 @@
 
 .site-footer {
     border-top: none;
+    padding-block-start: map.get($spacers, 3xl);
 }
 
 .footer-col-wrapper {
