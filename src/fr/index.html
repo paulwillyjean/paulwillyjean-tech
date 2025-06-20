@@ -8,24 +8,23 @@ lang: fr
 page_id: index
 ---
 
-<div class="hero-banner container-background padding-block-3xl">
-  <div class="wrapper grid">
-    <hgroup class="grid-col-12 grid-col-tablet-8">
-      <h1 class="display-1">Bienvenue!</h1>
-      <p>Je développe des sites web et des APIs depuis +10 ans.</p>
-    </hgroup>
-    <div class="grid-col-12 grid-col-tablet-4">
-      <img src="{% link /assets/images/paulwillyjean-selfie.png %}" alt="Image héroïque" srcset="">
-    </div>
+<div class="hero-banner grid padding-4">
+  <hgroup class="hero-banner-body grid-col-12 grid-col-tablet-6">
+    <h1 class="display-1">Bienvenue!</h1>
+    <p>Je développe des sites web et des APIs depuis +10 ans.</p>
+  </hgroup>
+  <div class="grid-col-12 grid-col-tablet-6">
+    <img class="hero-banner-image" src="{% link /assets/images/paulwillyjean-selfie.png %}" alt="Photo portrait de Paul Willy Jean" />
   </div>
 </div>
 <div class="wrapper">
-  <h2 class="margin-block-start-3xl">Les services</h2>
+  <h2 class="margin-block-start-12">Les services</h2>
   <p>Si vous avez besoin d'un site vitrine ou d'intégrer un service
       de livraison pour votre magasin en ligne, je suis là pour vous aider.</p>
   <div class="grid">
     {%  for service in site.data.services -%}
       <article class="card container-background grid-col-6 grid-col-laptop-3">
+        <img class="card-image" src="{% link {{ service.image | default: '/assets/images/author-selfie.png' }} %}" alt="{{ service.name }}" />
         <div class="card-body">
           {{ service.name}}
         </div>
@@ -34,17 +33,10 @@ page_id: index
   </div>
 </div>
 <div class="wrapper">
-  <h2 class="margin-block-start-3xl">L'accompagnement</h2>
+  <h2 class="margin-block-start-12">L'accompagnement</h2>
   <p>J'offre une expérience d'accompagnement complète pour répondre à vos besoins:</p>
-
-  <ol class="margin-block-end-3xl list ordered-list">
-    {% for experience in site.data.customer_experience -%}
-      <li class="list-item display-flex align-items-start">
-        <article class="customer-experience">
-          <h3 class="customer-experience-name margin-block-end-xs">{{ experience.name }}</h3>
-          <p class="customer-experience-description">{{ experience.description }}</p>
-        </article>
-      </li>
-    {%- endfor %}
-  </ol>
+  {% for experience in site.data.customer_experience -%}
+    <h3 class="customer-experience-name margin-block-start-8">{{ experience.name }}</h3>
+    <p class="customer-experience-description">{{ experience.description }}</p>
+  {%- endfor %}
 </div>

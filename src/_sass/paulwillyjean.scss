@@ -1,4 +1,6 @@
 @charset "utf-8";
+@use "sass:color";
+@use "sass:map";
 
 @font-face {
   font-family: "Atkinson Hyperlegible Next";
@@ -8,20 +10,20 @@
 }
 
 $base-font-family: "Atkinson Hyperlegible Next", Helvetica, sans-serif !default;
-$spacing-unit: 1rem !default;
+$spacing-unit: 16px !default;
 $spacers: (
-  none: 0,
-  xs: $spacing-unit * 0.25,
-  s: $spacing-unit * 0.5,
-  sm: $spacing-unit * 0.75, // small medium
-  md: $spacing-unit * 1,
-  lm: $spacing-unit * 1.25, // large medium
-  lg: $spacing-unit * 1.5,
-  xl: $spacing-unit * 1.75,
-  2xl: $spacing-unit * 2,
-  3xl: $spacing-unit * 3,
-  4xl: $spacing-unit * 4,
-) !default;
+  0: 0,
+  1: $spacing-unit * 0.25,
+  2: $spacing-unit * 0.5,
+  3: $spacing-unit * 0.75,
+  4: $spacing-unit * 1,
+  5: $spacing-unit * 1.25,
+  6: $spacing-unit * 1.5,
+  7: $spacing-unit * 1.75,
+  8: $spacing-unit * 2,
+  12: $spacing-unit * 3,
+  16: $spacing-unit * 4,
+  ) !default;
 $content-width: 1440px !default;
 $on-palm: 600px !default;
 $on-tablet: 800px !default;
@@ -30,36 +32,140 @@ $breakpoints: (
   palm: $on-palm,
   tablet: $on-tablet,
   laptop: $on-laptop,
-) !default;
+  ) !default;
 
-$background-color: lch(98.92% 2.48 144.48) !default;
-$text-color: #111 !default;
-$brand-color: $text-color !default;
+$primitives: (
+  "colors": ("white": (1000: #ffffff,
+      900: color.adjust(#ffffff, $alpha: -10%),
+      800: color.adjust(#ffffff, $alpha: -20%),
+      700: color.adjust(#ffffff, $alpha: -30%),
+      600: color.adjust(#ffffff, $alpha: -40%),
+      500: color.adjust(#ffffff, $alpha: -50%),
+      400: color.adjust(#ffffff, $alpha: -60%),
+      300: color.adjust(#ffffff, $alpha: -70%),
+      200: color.adjust(#ffffff, $alpha: -80%),
+      100: color.adjust(#ffffff, $alpha: -90%),
+    ),
+    "black": (1000: #000000,
+      900: color.adjust(#000000, $alpha: -10%),
+      800: color.adjust(#000000, $alpha: -20%),
+      700: color.adjust(#000000, $alpha: -30%),
+      600: color.adjust(#000000, $alpha: -40%),
+      500: color.adjust(#000000, $alpha: -50%),
+      400: color.adjust(#000000, $alpha: -60%),
+      300: color.adjust(#000000, $alpha: -70%),
+      200: color.adjust(#000000, $alpha: -80%),
+      100: color.adjust(#000000, $alpha: -90%),
+    ),
+    "emerald": (100: color.mix(white, #62d988, 80%),
+      200: color.mix(white, #62d988, 60%),
+      300: color.mix(white, #62d988, 40%),
+      400: color.mix(white, #62d988, 20%),
+      500: #62d988,
+      600: color.mix(black, #62d988, 20%),
+      700: color.mix(black, #62d988, 40%),
+      800: color.mix(black, #62d988, 60%),
+      900: color.mix(black, #62d988, 80%),
+      1000: color.mix(black, #62d988, 90%),
+    ),
+    "green-orange": (100: color.mix(white, #423c2a, 90%),
+      200: color.mix(white, #423c2a, 80%),
+      300: color.mix(white, #423c2a, 70%),
+      400: color.mix(white, #423c2a, 60%),
+      500: color.mix(white, #423c2a, 50%),
+      600: color.mix(black, #423c2a, 40%),
+      700: color.mix(black, #423c2a, 30%),
+      800: #423c2a,
+      900: color.mix(black, #423c2a, 20%),
+      1000: color.mix(black, #423c2a, 40%),
+    ),
+    "red-orange": (100: color.mix(white, #ffa277, 80%),
+      200: color.mix(white, #ffa277, 60%),
+      300: color.mix(white, #ffa277, 40%),
+      400: color.mix(white, #ffa277, 20%),
+      500: #ffa277,
+      600: color.mix(black, #ffa277, 20%),
+      700: color.mix(black, #ffa277, 40%),
+      800: color.mix(black, #ffa277, 60%),
+      900: color.mix(black, #ffa277, 80%),
+      1000: color.mix(black, #ffa277, 90%),
+    ))) !default;
+
+
+
+$background-color: #{map.get($primitives, "colors", "emerald", 100)} !default;
+$border-color: map.get($primitives, "colors", "emerald", 300) !default;
+$text-color: map.get($primitives, "colors", "emerald", 900) !default;
+$brand-color: map.get($primitives, "colors", "red-orange", 500) !default;
 
 @import "minima";
 @import "paulwillyjean/mixins";
 @import "paulwillyjean/base";
+@import "paulwillyjean/grid";
 @import "paulwillyjean/layout";
 @import "paulwillyjean/components";
 @import "paulwillyjean/utils";
 
 :root {
-  --ref-light-pastel-green: lch(98.92% 2.48 144.48
-  );
---ref-emerald-green: lch(78.46% 59.36 149.62);
---ref-dark-green-orange: lch(25.43% 12.11 93.32);
---ref-light-red-orange: lch(95.89% 2.35 45.01);
---ref-red-orange: lch(78.89% 59.35 45.01);
---ref-dark-red-orange: lch(42.57% 31.56 40.4);
---ref-white: lch(100% 0.01 296.81);
+  --ref-light-pastel-green: #f9fdf9;
+  --ref-light-red-orange: #f8f2f0;
+  --ref-dark-red-orange: #925444;
 
---sys-text-color: #{$text-color};
---sys-background-color: #{$background-color};
---sys-border-width: 1px;
---sys-border-color: lch(from var(--sys-text-color) l c h / 0.125);
---sys-brand-color: #{$brand-color};
---sys-surface-background: var(--sys-background-color);
---sys-surface-color: #{$text-color};
---sys-container-background: var(--ref-red-orange);
---sys-container-color: #{$text-color};
+  /**
+   * Default colors
+   * These are used for text, background, and border colors throughout the site.
+   */
+  --pwj-background-default-primary: #{$background-color};
+  --pwj-background-default-primary-hover: #{map.get($primitives, "colors", "emerald", 200)};
+  --pwj-background-default-secondary: #{map.get($primitives, "colors", "emerald", 200)};
+  --pwj-background-default-secondary-hover: #{map.get($primitives, "colors", "emerald", 300)};
+  --pwj-text-default-primary: #{$text-color};
+  --pwj-text-default-secondary: #{map.get($primitives, "colors", "emerald", 500)};
+  --pwj-border-default-primary: #{$border-color};
+  --pwj-border-default-secondary: #{map.get($primitives, "colors", "emerald", 500)};
+
+  /**
+   * Brand colors
+   * These are used for primary and secondary brand elements.
+   * They are also used for text and background colors in various components.
+   */
+  --pwj-background-brand-primary: #{$brand-color};
+  --pwj-background-brand-primary-hover: #{map.get($primitives, "colors", "red-orange", 600)};
+  --pwj-background-brand-secondary: #{map.get($primitives, "colors", "red-orange", 600)};
+  --pwj-background-brand-secondary-hover: #{map.get($primitives, "colors", "red-orange", 700)};
+  --pwj-text-brand-primary: #{map.get($primitives, "colors", "red-orange", 600)};
+  --pwj-text-brand-secondary: #{map.get($primitives, "colors", "red-orange", 700)};
+  --pwj-text-brand-on-primary: #{map.get($primitives, "colors", "red-orange", 100)};
+  --pwj-text-brand-on-secondary: #{map.get($primitives, "colors", "red-orange", 200)};
+  --pwj-border-brand-primary: #{map.get($primitives, "colors", "red-orange", 600)};
+  --pwj-border-brand-secondary: #{map.get($primitives, "colors", "red-orange", 700)};
+  --pwj-border-brand-on-primary: #{map.get($primitives, "colors", "red-orange", 500)};
+  --pwj-border-brand-on-secondary: #{map.get($primitives, "colors", "red-orange", 600)};
+
+  /**
+   * Color variables
+   * These are used to set text, background, and border colors throughout the site.
+   */
+  --pwj-text-color: var(--pwj-text-default-primary);
+  --pwj-background-color: var(--pwj-background-default-primary);
+  --pwj-border-width: 1px;
+  --pwj-border-color: var(--pwj-border-default-primary);
+
+
+  /**
+   * Border radius variables
+   * These are used to set border radius values throughout the site.
+   */
+  --pwj-border-radius: var(--pwj-border-radius-2);
+  @each $key, $space in $spacers {
+    --pwj-border-radius-#{$key}: #{$space};
+  }
+
+  /**
+   * Spacing variables
+   * These are used to set padding and margin values throughout the site.
+   */
+  @each $key, $space in $spacers {
+    --pwj-spacing-#{$key}: #{$space};
+  }
 }
