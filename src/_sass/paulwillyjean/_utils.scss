@@ -8,7 +8,8 @@
     @include make-spacers($selector);
 }
 
-$displays: (
+$utils: (
+"displays": (
     "selector": ".display",
     "property": font-size,
     "values": (
@@ -19,11 +20,17 @@ $displays: (
         5: 0.5rem,
         6: 0.25rem,
     )
-) !default;
+)) !default;
 
-@each $key, $value in map.get($displays, "values") {
-    #{map.get($displays, "selector")}-#{$key} {
-        #{map.get($displays, "property")}: $value;
+@each $key-key, $util in $utils {
+    $selector: map.get($util, "selector");
+    $property: map.get($util, "property");
+    $values: map.get($util, "values");
+
+    @each $key, $value in $values {
+        #{$selector}-#{$key} {
+            #{$property}: $value;
+        }
     }
 }
 
@@ -31,6 +38,10 @@ $displays: (
     display: flex;
 }
 
-.align-items-start {
-    align-items: start;
+@each $property in (align-content, align-items, align-self, justify-content, justify-items, justify-self) {
+    @each $value in (start, end, center, stretch, space-between, space-around, space-evenly) {
+        .#{$property}-#{$value} {
+            #{$property}: #{$value};
+        }
+    }
 }

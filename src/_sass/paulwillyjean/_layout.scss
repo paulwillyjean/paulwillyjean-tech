@@ -64,6 +64,20 @@
     float: right;
 }
 
+.customer-experience-list {
+    > .customer-experience::before {
+        content: "";
+    }
+
+    .customer-experience-name {
+        margin: 0;
+
+        &::before {
+            content: counter(list-counter) ". ";
+        }
+    }
+}
+
 @include media-query($on-palm) {
     .footer-col {
         width: -webkit-calc(100% - (#{$spacing-unit} / 2));

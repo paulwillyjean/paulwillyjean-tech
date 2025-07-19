@@ -10,15 +10,19 @@ page_id: index
 
 <div class="hero-banner grid padding-4">
   <hgroup class="hero-banner-body grid-col-12 grid-col-tablet-6">
-    <h1 class="display-1">Bienvenue!</h1>
-    <p>Je développe des sites web et des APIs depuis +10 ans.</p>
+    <h1 class="display-1">Je suis Paul!</h1>
+    <p>Je développe des sites web et des APIs pour des organismes à portée sociale.</p>
   </hgroup>
   <div class="grid-col-12 grid-col-tablet-6">
     <img class="hero-banner-image" src="{% link /assets/images/paulwillyjean-selfie.png %}" alt="Photo portrait de Paul Willy Jean" />
   </div>
 </div>
 <div class="wrapper">
-  <h2 class="margin-block-start-12">Les services</h2>
+  <h2 class="margin-block-start-16">Qui suis-je?</h2>
+  <p>Je possède plus de 10 ans d'expérience en développement de sites web et d'APIs. J'ai travaillé pour des petites et grandes entreprises,
+    où j'ai acquis une expertise dans la création et la maintenance de solutions numériques.</p>
+  <p>En tant que développeur, je souhaite mettre cette expérience à profit des organismes communautaires et à portée sociale du Québec.</p>
+  <h2 class="margin-block-start-16">Les services</h2>
   <p>Si vous avez besoin d'un site vitrine ou d'intégrer un service
       de livraison pour votre magasin en ligne, je suis là pour vous aider.</p>
   <div class="grid">
@@ -33,10 +37,14 @@ page_id: index
   </div>
 </div>
 <div class="wrapper">
-  <h2 class="margin-block-start-12">L'accompagnement</h2>
+  <h2 class="margin-block-start-16">L'accompagnement</h2>
   <p>J'offre une expérience d'accompagnement complète pour répondre à vos besoins:</p>
+  <ol class="grid customer-experience-list">
   {% for experience in site.data.customer_experience -%}
-    <h3 class="customer-experience-name margin-block-start-8">{{ experience.name }}</h3>
-    <p class="customer-experience-description">{{ experience.description }}</p>
+    <li class="customer-experience grid-col-6">
+      <h3 class="customer-experience-name margin-block-start-8">{{ experience.name }}</h3>
+      <p class="customer-experience-description">{{ experience.description }}</p>
+    </li>
   {%- endfor %}
+  </ol>
 </div>
