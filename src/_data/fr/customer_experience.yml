@@ -1,0 +1,32 @@
+- name: Première rencontre
+  description: >
+    Prenons un peu de temps pour faire connaissance. C'est le moment d'en
+    apprendre plus sur vous, votre mission et vos attentes par rapport au
+    site web.
+- name: Définition de vos besoins d'affaire
+  description: >
+    Désirez-vous une simple page de contact, un blog, une boutique en ligne,
+    un API pour intégrer différents services?
+    Ensemble, nous explorons les options qui se présentent à vous.
+- name: Définition des fonctionalités du site et des contraintes techniques
+  description: >
+    C'est l'une des étapes les moins excitantes du projet, mais elle reste cruciale!
+    Nous documentons ensemble les fonctionalités les plus importantes
+    de votre site web, leurs critères d'acceptabilité
+    et l'ensemble des restrictions techniques à prendre en compte.
+    Une bonne communication et une bonne documentation sont la clé du succès.
+- name: Une approche collaborative au développement du site web
+  description: >
+    C'est là que le travail se fait. Je propose une approche collaborative
+    à travers laquelle vous pourrez valider en continu la progression du projet
+    et proposer des révisions.
+- name: Déploiement du site
+  description: >
+    Ça y est! Le site est prêt; il ne reste qu'à le révéler au public! Je prends
+    en charge le déploiement afin de m'assurer qu'il se déroule sans problème.
+- name: Modifications et demandes de changement
+  description: >
+    Vos besoins seront amenés à évoluer au fil du temps et c'est normal. À travers
+    l'approche de développement collaborative que je proposais précédemment,
+    j'offre un cadre à travers duquel nous pouvons convenir de changements à apporter
+    au site tout en garantissant la completion du projet.

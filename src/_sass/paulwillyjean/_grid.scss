@@ -1,0 +1,36 @@
+.grid {
+    display: grid;
+    grid-template-rows: repeat(var(--grid-rows, 1), 1fr);
+    grid-template-columns: repeat(var(--grid-columns, 12), 1fr);
+    row-gap: var(--grid-row-gap, var(--pwj-spacing-2));
+    column-gap: var(--grid-column-gap, var(--pwj-spacing-2));
+
+    @for $i from 1 through 12 {
+        .grid-col-#{$i} {
+            grid-column-end: span #{$i};
+        }
+    }
+
+    @for $i from 1 to 12 {
+        .grid-start-#{$i} {
+            grid-column-start: #{$i};
+        }
+    }
+
+    @each $key, $breakpoint in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            @for $i from 1 through 12 {
+                .grid-col-#{$key}-#{$i} {
+                    grid-column-end: span #{$i};
+                }
+            }
+
+            @for $i from 1 to 12 {
+                .grid-start-#{$key}-#{$i} {
+                    grid-column-start: #{$i};
+                }
+            }
+
+        }
+    }
+}

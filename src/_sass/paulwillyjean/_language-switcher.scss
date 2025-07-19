@@ -1,0 +1,13 @@
+.language-switcher {
+    margin: 0;
+    list-style: none;
+    display: inline;
+
+    &__item {
+        display: inline;
+    }
+
+    .site-language:hover {
+        text-decoration: none;
+    }
+}

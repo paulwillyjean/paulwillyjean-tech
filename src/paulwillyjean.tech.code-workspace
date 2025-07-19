@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../usr/local/rvm/gems/default/gems/minima-2.5.2"
+		},
+		{
+			"path": "../../../usr/local/rvm/gems/default/gems/jekyll-polyglot-1.8.1"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.html": "liquid",
+			"*.scss": "liquid-scss"
+		},
+		"editor.formatOnSave": true,
+		"liquid.config.method": "workspace",
+		"liquid.engine": "jekyll",
+		"liquid.format.rules": {
+			"json": {
+				"braceAllman": true
+			}
+		}
+	}
+}

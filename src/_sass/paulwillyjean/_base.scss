@@ -1,0 +1,92 @@
+body {
+    color: var(--pwj-text-color);
+    background-color: map.get($primitives, "colors", "white", 1000);
+}
+
+a:is(:any-link, :visited) {
+    color: inherit;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.svg-icon {
+    fill: currentColor;
+    padding-right: 0;
+    margin-right: 5px;
+}
+
+ul, ol {
+    margin: 0;
+}
+
+p,
+blockquote,
+pre,
+dl,
+figure,
+%vertical-rhythm {
+    margin: 0;
+
+    & + * {
+        margin-block-start: $spacing-unit;
+    }
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+%headings {
+    font-size: var(--pwj-text-size);
+    line-height: var(--pwj-text-line-height);
+    font-weight: var(--pwj-text-weight);
+    margin: 0;
+
+    & + * {
+        margin-block-start: $spacing-unit;
+    }
+}
+
+h1, .h1 {
+    --pwj-text-size: 2rem;
+    --pwj-text-line-height: 1;
+    --pwj-text-weight: 300;
+}
+
+h2, .h2 {
+    --pwj-text-size: 1.5rem;
+    --pwj-text-line-height: 1;
+    --pwj-text-weight: 300;
+}
+
+h3, .h3 {
+    --pwj-text-size: 1.25rem;
+    --pwj-text-line-height: 1.2;
+    --pwj-text-weight: 400;
+}
+
+h4, .h4 {
+    --pwj-text-size: 1rem;
+    --pwj-text-line-height: 1.2;
+    --pwj-text-weight: 600;
+}
+
+h5, .h5 {
+    --pwj-text-size: 0.875rem;
+    --pwj-text-line-height: 1.2;
+    --pwj-text-weight: 600;
+}
+
+h6, .h6 {
+    --pwj-text-size: 0.75rem;
+    --pwj-text-line-height: 1.2;
+    --pwj-text-weight: 600;
+}

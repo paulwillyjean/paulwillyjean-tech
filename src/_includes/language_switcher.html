@@ -1,0 +1,20 @@
+{%- unless site.languages.size <= 1 %}
+  <ul class="page-link language-switcher">
+    {%- for language in site.languages -%}
+      {%- unless language == site.active_lang -%}
+        {%- capture language_url -%}
+          {{- site.baseurl -}} {%- unless language == site.default_lang -%}/{{- language -}} {%- endunless- %} {{- page.permalink_lang[language] -}}
+        {%- endcapture -%}
+        <li class="language-switcher__item">
+          <a
+            class="site-language site-language-{{- language -}}"
+            rel="alternate"
+            hreflang="{{- language -}}"
+            {%- static_href -%}href="{{- language_url -}}"{%- endstatic_href -%} >
+            {{ site.data[language].language_switcher[language] |  escape }}
+          </a>
+        </li>
+      {%- endunless -%}
+    {%- endfor -%}
+  </ul>
+{%- endunless -%}

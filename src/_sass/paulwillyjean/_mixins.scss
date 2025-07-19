@@ -1,0 +1,7 @@
+@mixin make-spacers($selector, $property: $selector, $values: $spacers) {
+    @each $key, $value in $values {
+        .#{$selector}-#{$key} {
+            #{$property}: $value;
+        }
+    }
+}

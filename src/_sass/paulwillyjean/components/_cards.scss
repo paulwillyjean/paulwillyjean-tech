@@ -1,0 +1,29 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    background: var(--pwj-background-color);
+    color: var(--pwj-text-color);
+    border: var(--pwj-border-width) solid var(--pwj-border-color);
+    border-radius: var(--card-border-radius, var(--pwj-border-radius));
+    padding: var(--card-padding, var(--pwj-spacing-2));
+    gap: var(--card-gap, var(--pwj-spacing-4));
+
+
+    .card-image {
+        border-radius: var(--card-border-radius, var(--pwj-border-radius));
+    }
+
+    .card-body {
+        flex-basis: 1 0 auto;
+        padding: var(--card-body-padding, var(--pwj-spacing-0));
+    }
+}
+
+.card-group {
+    display: flex;
+    flex-flow: row wrap;
+
+    >.card {
+        flex-basis: 1 0 0;
+    }
+}
