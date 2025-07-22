@@ -1,0 +1,31 @@
+---
+layout: page
+title: Les services
+permalink: /services/
+page_id: services
+lang: fr
+---
+
+{% comment %} <h2 class="margin-block-start-16">Les services</h2> {% endcomment %}
+<p>Si vous avez besoin d'un site vitrine ou d'intégrer un service
+    de livraison pour votre magasin en ligne, je suis là pour vous aider.</p>
+<div class="grid">
+{%  for service in site.data.services -%}
+    <article class="card container-background grid-col-6 grid-col-laptop-3">
+    <img class="card-image" src="{% link {{ service.image | default: '/assets/images/author-selfie.png' }} %}" alt="{{ service.name }}" />
+    <div class="card-body">
+        {{ service.name}}
+    </div>
+    </article>
+{%- endfor %}
+</div>
+<h2 class="margin-block-start-16">L'accompagnement</h2>
+<p>J'offre une expérience d'accompagnement complète pour répondre à vos besoins:</p>
+<ol class="grid customer-experience-list">
+{% for experience in site.data.customer_experience -%}
+<li class="customer-experience grid-col-6">
+    <h3 class="customer-experience-name margin-block-start-8">{{ experience.name }}</h3>
+    <p class="customer-experience-description">{{ experience.description }}</p>
+</li>
+{%- endfor %}
+</ol>
