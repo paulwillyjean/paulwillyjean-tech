@@ -9,18 +9,18 @@
 }
 
 $utils: (
-"displays": (
-    "selector": ".display",
-    "property": font-size,
-    "values": (
-        1: 4rem,
-        2: 2rem,
-        3: 1rem,
-        4: 0.75rem,
-        5: 0.5rem,
-        6: 0.25rem,
-    )
-)) !default;
+    "displays": (
+        "selector": ".display",
+        "property": font-size,
+        "values": (
+            1: 4rem,
+            2: 2rem,
+            3: 1rem,
+            4: 0.75rem,
+            5: 0.5rem,
+            6: 0.25rem,
+        )
+    )) !default;
 
 @each $key-key, $util in $utils {
     $selector: map.get($util, "selector");

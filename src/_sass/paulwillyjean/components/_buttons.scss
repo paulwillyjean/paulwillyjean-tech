@@ -1,0 +1,53 @@
+button, .button {
+    display: var(--button-display, block);
+    padding: var(--button-padding, var(--pwj-spacing-2));
+    border-radius: var(--button-border-radius, var(--pwj-border-radius));
+    line-height: var(--button-line-height, 1);
+    background-color: var(--button-background, --pwj-background-default-primary);
+    color: var(--button-color, var(--pwj-text-default-primary));
+    border: var(--button-border-width, var(--pwj-border-width)) solid var(--button-border-color, var(--pwj-border-default-primary));
+    text-decoration: var(--button-decoration, none);
+    font-size: var(--button-font-size, 1rem);
+    max-width: 100%;
+    width: max-content;
+
+    &:is(:any-link) {
+        color: var(--button-color);
+    }
+
+    &:hover {
+        --button-background: var(--pwj-background-default-primary-hover);
+    }
+
+    &:active {
+        --button-background: var(--pwj-background-default-primary-active);
+    }
+}
+
+.button-brand {
+    --button-background: var(--pwj-background-brand-primary);
+    --button-color: var(--pwj-text-brand-on-primary);
+    --button-border-color: var(--pwj-border-brand-primary);
+
+    &:hover {
+        --button-background: var(--pwj-background-brand-primary-hover);
+    }
+
+    &:active {
+        --button-background: var(--pwj-background-brand-primary-active);
+    }
+}
+
+.button-lg {
+    --button-padding: var(--pwj-spacing-3);
+    --button-font-size: 1.25rem;
+}
+
+.button-xl {
+    --button-padding: var(--pwj-spacing-4);
+    --button-font-size: 1.5rem;
+}
+
+.button-pill {
+    --button-border-radius: calc(var(--button-padding) * 2) / 50%;
+}

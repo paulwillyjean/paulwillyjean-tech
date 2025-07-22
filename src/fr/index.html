@@ -9,12 +9,15 @@ page_id: index
 ---
 
 <div class="hero-banner grid padding-4">
-  <hgroup class="hero-banner-body grid-col-12 grid-col-tablet-6">
-    <h1 class="display-1">Je suis Paul!</h1>
-    <p>Je développe des sites web et des APIs pour des organismes à portée sociale.</p>
-  </hgroup>
+  <div class="hero-banner-body align-self-center grid-col-12 grid-col-tablet-6">
+    <h1 class="display-1">Je suis Paul</h1>
+    <p>Je suis un développeur web avec de fortes valeurs progressistes. Je veux développer une pratique ancrée dans les milieux locaux,
+      activistes, communautaires et coopératifs.</p>
+    <p>Je suis fermement engagé dans les mouvements de solidarité avec les Premières Nations, Haïti, la Palestine, l'Ukraine, etc.</p>
+    <a href="/a-propos" class="button button-brand button-xl margin-block-start-8">Contactez-moi</a>
+  </div>
   <div class="grid-col-12 grid-col-tablet-6">
-    <img class="hero-banner-image" src="{% link /assets/images/paulwillyjean-selfie.png %}" alt="Photo portrait de Paul Willy Jean" />
+    <img class="hero-banner-image" src="{% link /assets/images/author-selfie.png %}" alt="Photo portrait de Paul Willy Jean" />
   </div>
 </div>
 <div class="wrapper">
@@ -22,29 +25,8 @@ page_id: index
   <p>Je possède plus de 10 ans d'expérience en développement de sites web et d'APIs. J'ai travaillé pour des petites et grandes entreprises,
     où j'ai acquis une expertise dans la création et la maintenance de solutions numériques.</p>
   <p>En tant que développeur, je souhaite mettre cette expérience à profit des organismes communautaires et à portée sociale du Québec.</p>
-  <h2 class="margin-block-start-16">Les services</h2>
-  <p>Si vous avez besoin d'un site vitrine ou d'intégrer un service
-      de livraison pour votre magasin en ligne, je suis là pour vous aider.</p>
-  <div class="grid">
-    {%  for service in site.data.services -%}
-      <article class="card container-background grid-col-6 grid-col-laptop-3">
-        <img class="card-image" src="{% link {{ service.image | default: '/assets/images/author-selfie.png' }} %}" alt="{{ service.name }}" />
-        <div class="card-body">
-          {{ service.name}}
-        </div>
-      </article>
-    {%- endfor %}
-  </div>
-</div>
-<div class="wrapper">
-  <h2 class="margin-block-start-16">L'accompagnement</h2>
-  <p>J'offre une expérience d'accompagnement complète pour répondre à vos besoins:</p>
-  <ol class="grid customer-experience-list">
-  {% for experience in site.data.customer_experience -%}
-    <li class="customer-experience grid-col-6">
-      <h3 class="customer-experience-name margin-block-start-8">{{ experience.name }}</h3>
-      <p class="customer-experience-description">{{ experience.description }}</p>
-    </li>
-  {%- endfor %}
-  </ol>
+  <p>Par conséquent, je priorise les projets orientés autour des communautés féministes, queers, racisés, handicapées, neurodivergeantes,
+      des scènes kiki-ballroom, burlesques et de drag, des espaces de support mutuel.</p>
+  <p>Je veux nous aider à monter les sites web, API et applications dont nous avons besoins pour faire avancer la justice sociale,
+    répondre à la crise climatique, et promouvoir la mobilité active, la santé publique et l`accès au logement.</p>
 </div>

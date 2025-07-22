@@ -3,7 +3,7 @@ body {
     background-color: map.get($primitives, "colors", "white", 1000);
 }
 
-a:is(:any-link, :visited) {
+a:where(:any-link, :visited) {
     color: inherit;
     text-decoration-line: underline;
     text-decoration-style: dotted;

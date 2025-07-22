@@ -15,6 +15,8 @@
 }
 
 .hero-banner {
+    --grid-column-gap: var(--pwj-spacing-4);
+
     background: var(--pwj-background-color);
     color: var(--pwj-text-color);
     border: var(--pwj-border-width) solid var(--pwj-border-color);

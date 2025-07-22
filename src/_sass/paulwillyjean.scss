@@ -23,6 +23,7 @@ $spacers: (
   8: $spacing-unit * 2,
   12: $spacing-unit * 3,
   16: $spacing-unit * 4,
+  auto: auto
   ) !default;
 $content-width: 1440px !default;
 $on-palm: 600px !default;
@@ -116,9 +117,11 @@ $brand-color: map.get($primitives, "colors", "red-orange", 500) !default;
    * These are used for text, background, and border colors throughout the site.
    */
   --pwj-background-default-primary: #{$background-color};
-  --pwj-background-default-primary-hover: #{map.get($primitives, "colors", "emerald", 200)};
+  --pwj-background-default-primary-hover: #{$background-color};
+  --pwj-background-default-primary-active: #{map.get($primitives, "colors", "emerald", 200)};
   --pwj-background-default-secondary: #{map.get($primitives, "colors", "emerald", 200)};
-  --pwj-background-default-secondary-hover: #{map.get($primitives, "colors", "emerald", 300)};
+  --pwj-background-default-secondary-hover: #{map.get($primitives, "colors", "emerald", 200)};
+  --pwj-background-default-secondary-active: #{map.get($primitives, "colors", "emerald", 300)};
   --pwj-text-default-primary: #{$text-color};
   --pwj-text-default-secondary: #{map.get($primitives, "colors", "emerald", 500)};
   --pwj-border-default-primary: #{$border-color};
@@ -130,13 +133,15 @@ $brand-color: map.get($primitives, "colors", "red-orange", 500) !default;
    * They are also used for text and background colors in various components.
    */
   --pwj-background-brand-primary: #{$brand-color};
-  --pwj-background-brand-primary-hover: #{map.get($primitives, "colors", "red-orange", 600)};
+  --pwj-background-brand-primary-hover: #{$brand-color};
+  --pwj-background-brand-primary-active: #{map.get($primitives, "colors", "red-orange", 600)};
   --pwj-background-brand-secondary: #{map.get($primitives, "colors", "red-orange", 600)};
-  --pwj-background-brand-secondary-hover: #{map.get($primitives, "colors", "red-orange", 700)};
+  --pwj-background-brand-secondary-hover: #{map.get($primitives, "colors", "red-orange", 600)};
+  --pwj-background-brand-secondary-active: #{map.get($primitives, "colors", "red-orange", 700)};
   --pwj-text-brand-primary: #{map.get($primitives, "colors", "red-orange", 600)};
   --pwj-text-brand-secondary: #{map.get($primitives, "colors", "red-orange", 700)};
-  --pwj-text-brand-on-primary: #{map.get($primitives, "colors", "red-orange", 100)};
-  --pwj-text-brand-on-secondary: #{map.get($primitives, "colors", "red-orange", 200)};
+  --pwj-text-brand-on-primary: #{map.get($primitives, "colors", "red-orange", 900)};
+  --pwj-text-brand-on-secondary: #{map.get($primitives, "colors", "red-orange", 1000)};
   --pwj-border-brand-primary: #{map.get($primitives, "colors", "red-orange", 600)};
   --pwj-border-brand-secondary: #{map.get($primitives, "colors", "red-orange", 700)};
   --pwj-border-brand-on-primary: #{map.get($primitives, "colors", "red-orange", 500)};
