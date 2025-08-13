@@ -90,3 +90,14 @@ h6, .h6 {
     --pwj-text-line-height: 1.2;
     --pwj-text-weight: 600;
 }
+
+.social-media-list {
+    a {
+        text-decoration: none;
+
+        .username {
+            text-decoration: underline;
+            text-decoration-style: dotted;
+        }
+    }
+}

@@ -16,14 +16,29 @@
 
 .hero-banner {
     --grid-column-gap: var(--pwj-spacing-4);
+    --grid-row-gap: var(--pwj-spacing-4);
 
     background: var(--pwj-background-color);
     color: var(--pwj-text-color);
     border: var(--pwj-border-width) solid var(--pwj-border-color);
     border-radius: var(--pwj-border-radius);
 
+    .hero-banner-body {
+        order: 1;
+
+        @media screen and (min-width: map.get($breakpoints, tablet)) {
+            order: unset;
+        }
+    }
+
     .hero-banner-image {
         border-radius: var(--pwj-border-radius);
+        order: 0;
+
+        @media screen and (min-width: map.get($breakpoints, tablet)) {
+            order: unset;
+
+        }
     }
 }
 
@@ -51,7 +66,7 @@
 .site-footer {
     border-start-start-radius: var(--pwj-border-radius);
     border-start-end-radius: var(--pwj-border-radius);
-    margin-inline: var(--pwj-spacing-4);
+    margin-inline: var(--pwj-spacing-2);
     margin-block-start: var(--pwj-spacing-12);
     padding-block: var(--pwj-spacing-12);
 }
