@@ -1,20 +1,20 @@
-ul, ol, .list, .ordered-list {
+.list, .ordered-list {
     --list-border-width: var(--pwj-border-width);
     --list-border-color: var(--pwj-border-color);
 
     list-style-type: var(--list-style-type, none);
 
-    > :is(li, .list-item) {
+    > :is(.list-item) {
         border: var(--list-border-width, var(--pwj-border-width)) solid var(--list-border-color, var(--pwj-border-color));
         padding-block: var(--list-item-padding-block, var(--pwj-spacing-4));
         padding-inline: var(--list-item-padding-inline, var(--pwj-spacing-4));
     }
 }
 
-ol, .ordered-list {
+.ordered-list {
     counter-reset: list-counter;
 
-    & > :is(li, .list-item):before {
+    & > :is(.list-item):before {
         counter-increment: list-counter;
         content: counter(list-counter) ". ";
         white-space: pre;
