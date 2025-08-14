@@ -29,11 +29,7 @@ pre,
 dl,
 figure,
 %vertical-rhythm {
-    margin: 0;
-
-    & + * {
-        margin-block-start: $spacing-unit;
-    }
+    margin-block: $spacing-unit;
 }
 
 
@@ -48,11 +44,9 @@ h6,
     font-size: var(--pwj-text-size);
     line-height: var(--pwj-text-line-height);
     font-weight: var(--pwj-text-weight);
-    margin: 0;
 
-    & + * {
-        margin-block-start: $spacing-unit;
-    }
+    margin-top: map.get($spacers, 16);
+    margin-bottom: $spacing-unit;
 }
 
 h1, .h1 {
