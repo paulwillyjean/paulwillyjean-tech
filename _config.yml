@@ -17,7 +17,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Paul-Willy Jean
+title: PWJ
+author: Paul-Willy Jean
 email: paulwillyjean@paulwillyjean.tech
 description: >- # this means to ignore newlines until "baseurl:"
   Développeur web à votre service
@@ -25,6 +26,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.paulwillyjean.tech" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  paulwillyjean
 bluesky_username: paulwillyjean.bsky.social
+mastodon:
+  - username: paulwillyjean
+    instance: techhub.social
 show_excerpts: false
 show_posts_on_home: false
 
