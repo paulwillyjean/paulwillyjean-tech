@@ -19,21 +19,11 @@ a:hover {
     margin-right: 5px;
 }
 
-ul, ol {
-    margin: 0;
-}
-
-p,
-blockquote,
-pre,
-dl,
-figure,
-%vertical-rhythm {
-    margin: 0;
-
-    & + * {
-        margin-block-start: $spacing-unit;
-    }
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+p, blockquote, pre, ul, ol, dl,
+figure, %vertical-rhythm {
+    margin-block: var(--pwj-spacing-2, $spacing-unit * 0.5);
 }
 
 
@@ -48,11 +38,8 @@ h6,
     font-size: var(--pwj-text-size);
     line-height: var(--pwj-text-line-height);
     font-weight: var(--pwj-text-weight);
-    margin: 0;
 
-    & + * {
-        margin-block-start: $spacing-unit;
-    }
+    margin-top: var(--pwj-spacing-16);
 }
 
 h1, .h1 {
