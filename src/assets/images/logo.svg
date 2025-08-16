@@ -2,12 +2,12 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="260.64175"
+   width="275.93784"
    height="115.56255"
-   viewBox="0 0 68.961464 30.575925"
+   viewBox="0 0 73.008551 30.575925"
    version="1.1"
    id="svg1"
-   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
    sodipodi:docname="logo.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -26,20 +26,20 @@
      showguides="true"
      inkscape:lockguides="false"
      showgrid="true"
-     inkscape:zoom="3.9554457"
-     inkscape:cx="99.356691"
-     inkscape:cy="59.158946"
-     inkscape:window-width="1712"
-     inkscape:window-height="1013"
+     inkscape:zoom="3.1930291"
+     inkscape:cx="122.76744"
+     inkscape:cy="78.138969"
+     inkscape:window-width="1920"
+     inkscape:window-height="1008"
      inkscape:window-x="0"
-     inkscape:window-y="1091"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="g310">
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
     <inkscape:grid
        id="grid308"
        units="px"
-       originx="-1.9775253e-05"
-       originy="6.2387131e-07"
+       originx="-1.9775252e-05"
+       originy="5.792457e-07"
        spacingx="1.0583333"
        spacingy="1.0583333"
        empcolor="#0099e5"
@@ -52,7 +52,20 @@
        dotted="true" />
   </sodipodi:namedview>
   <defs
-     id="defs1" />
+     id="defs1">
+    <rect
+       x="31.999924"
+       y="48"
+       width="95.658051"
+       height="47.758923"
+       id="rect3" />
+    <rect
+       x="75.999924"
+       y="44"
+       width="47.999996"
+       height="27.999998"
+       id="rect1" />
+  </defs>
   <g
      inkscape:label="Logo"
      inkscape:groupmode="layer"
@@ -101,7 +114,7 @@
        style="stroke-width:0.930773;stroke-dasharray:none">
       <path
          sodipodi:type="star"
-         style="font-variation-settings:'wght' 600;display:inline;fill:#ffa277;stroke:#996147;stroke-width:0.76685;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
+         style="font-variation-settings:'wght' 600;display:inline;fill:#ffa277;fill-opacity:1;stroke:#996147;stroke-width:0.76685;stroke-dasharray:none;stroke-opacity:1"
          id="path308-4"
          inkscape:flatsided="true"
          sodipodi:sides="6"
@@ -128,6 +141,11 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.8924px;font-family:'Atkinson Hyperlegible Next VF';-inkscape-font-specification:'Atkinson Hyperlegible Next VF, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;fill:#332018;fill-opacity:1;stroke:none;stroke-width:0.930773;stroke-dasharray:none"
            x="35.408424"
            y="18.575386">w</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.46571751,0,0,0.46505599,-2.2283997,-0.23811074)"
+         id="text1"
+         style="text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1);fill:#000000" />
     </g>
     <g
        id="g308"
@@ -169,7 +187,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="Nom">
+     inkscape:label="Nom"
+     style="display:inline">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1;font-family:'Atkinson Hyperlegible Next VF';-inkscape-font-specification:'Atkinson Hyperlegible Next VF, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#332018;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-dasharray:none;stroke-opacity:1"
@@ -187,5 +206,27 @@
          x="34.248142"
          y="22.467695"
          id="tspan315">Jean</tspan></text>
+  </g>
+  <g
+     id="g3"
+     inkscape:groupmode="layer"
+     style="display:none">
+    <path
+       style="fill:#1d0333;fill-opacity:1;stroke:#03b5b3;stroke-width:0.529167;stroke-dasharray:none;stroke-opacity:1"
+       d="m -1.9775252e-5,16.933333 c 0,12.699999 4.233333075252,16.933332 16.933332775252,16.933332 v 0 c 12.624467,1e-6 16.933353,-3.811688 16.933353,-17.490804 v 0 C 33.866666,4.4338444 29.633312,5.7924569e-7 16.933313,5.7924569e-7 v 0 C 4.24553,0 -1.9775252e-5,4.2333337 -1.9775252e-5,16.933333 Z"
+       id="path3"
+       sodipodi:nodetypes="ccccccccc" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-4.1428595,0.0637842)"
+       id="text3"
+       style="font-size:24px;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect3);shape-padding:0.170444;fill:#1d0333;fill-opacity:1;stroke:#03b5b3;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       x="0"
+       y="0"><tspan
+         x="32.169922"
+         y="70.006926"
+         id="tspan2"><tspan
+           style="font-family:'Adwaita Mono';-inkscape-font-specification:'Adwaita Mono';fill:#ffffff;stroke:none"
+           id="tspan1">PWJ_</tspan></tspan></text>
   </g>
 </svg>
