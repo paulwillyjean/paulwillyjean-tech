@@ -19,6 +19,7 @@
 		"liquid.config.method": "workspace",
 		"liquid.engine": "jekyll",
 		"liquid.format.rules": {
+			"wrap": 120,
 			"json": {
 				"braceAllman": true
 			}
