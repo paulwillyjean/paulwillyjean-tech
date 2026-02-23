@@ -13,6 +13,7 @@
     gap: var(--hero-banner-row-gap) var(--hero-banner-column-gap);
 
     .hero-banner-heading {
+        --pwj-text-weight: 400;
         font-size: var(--hero-banner-heading-size, 4rem);
         margin-block: var(--pwj-spacing-4);
     }
@@ -21,18 +22,14 @@
         border-radius: var(--pwj-border-radius);
     }
 
-    .hero-banner-body {
-        @media screen and (min-width: map.get($breakpoints, tablet)) {
-        }
-    }
-
     @media screen and (min-width: map.get($breakpoints, tablet)) {
         --hero-banner-spacing: var(--pwj-spacing-4);
 
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, auto);
 
-        .hero-banner-heading, .hero-banner-body {
+        .hero-banner-heading,
+        .hero-banner-body {
             padding-inline: var(--hero-banner-spacing);
         }
 
