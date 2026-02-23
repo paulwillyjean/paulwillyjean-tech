@@ -14,39 +14,6 @@
     --pwj-border-color: var(--pwj-border-default-primary);
 }
 
-.hero-banner {
-    --grid-column-gap: var(--pwj-spacing-2);
-    --grid-row-gap: var(--pwj-spacing-2);
-
-    background: var(--pwj-background-color);
-    color: var(--pwj-text-color);
-    border: var(--pwj-border-width) solid var(--pwj-border-color);
-    border-radius: var(--pwj-border-radius);
-    padding: var(--pwj-spacing-2);
-
-    h1 {
-        margin-block: var(--pwj-spacing-2);
-    }
-
-    .hero-banner-body {
-        order: 1;
-
-        @media screen and (min-width: map.get($breakpoints, tablet)) {
-            order: unset;
-        }
-    }
-
-    .hero-banner-image {
-        border-radius: var(--pwj-border-radius);
-        order: 0;
-
-        @media screen and (min-width: map.get($breakpoints, tablet)) {
-            order: unset;
-
-        }
-    }
-}
-
 .site-header,
 .site-footer {
     background: var(--pwj-background-color);

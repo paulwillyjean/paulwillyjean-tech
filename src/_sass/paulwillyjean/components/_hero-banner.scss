@@ -1,0 +1,50 @@
+.hero-banner {
+    --hero-banner-spacing: var(--pwj-spacing-2);
+    --hero-banner-column-gap: var(--hero-banner-spacing);
+    --hero-banner-row-gap: 0;
+    --hero-banner-padding: var(--hero-banner-spacing);
+
+    display: grid;
+    background: var(--pwj-background-color);
+    color: var(--pwj-text-color);
+    border: var(--pwj-border-width) solid var(--pwj-border-color);
+    border-radius: var(--pwj-border-radius);
+    padding: var(--hero-banner-padding);
+    gap: var(--hero-banner-row-gap) var(--hero-banner-column-gap);
+
+    .hero-banner-heading {
+        font-size: var(--hero-banner-heading-size, 4rem);
+        margin-block: var(--pwj-spacing-4);
+    }
+
+    .hero-banner-figure {
+        border-radius: var(--pwj-border-radius);
+    }
+
+    .hero-banner-body {
+        @media screen and (min-width: map.get($breakpoints, tablet)) {
+        }
+    }
+
+    @media screen and (min-width: map.get($breakpoints, tablet)) {
+        --hero-banner-spacing: var(--pwj-spacing-4);
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+
+        .hero-banner-heading, .hero-banner-body {
+            padding-inline: var(--hero-banner-spacing);
+        }
+
+        .hero-banner-heading {
+            --hero-banner-heading-size: 8rem;
+            align-self: end;
+        }
+
+        .hero-banner-figure {
+            grid-row: 1 / -1;
+            grid-column: 2;
+            align-self: center;
+        }
+    }
+}

@@ -9,9 +9,14 @@ page_id: index
 city: Tiohtià:ke
 ---
 
-<div class="hero-banner grid">
-  <div class="hero-banner-body align-self-center grid-col-12 grid-col-tablet-6">
-    <h1 class="display-1">Bonjour, moi c'est Paul.</h1>
+<div class="hero-banner">
+  <h1 class="hero-banner-heading">Bonjour, moi c'est Paul.</h1>
+  <img class="hero-banner-figure" src="{{ "/assets/images/author-selfie.png" | relative_url }}" alt="Photo portrait de Paul Willy Jean" />
+  {% comment %} <div class="hero-banner-figure grid-col-12 grid-col-tablet-6">
+    <img class="hero-banner-image" src="{{ "/assets/images/author-selfie.png" | relative_url }}" alt="Photo portrait de Paul Willy Jean" />
+  </div> {% endcomment %}
+  {% comment %} <div class="hero-banner-body align-self-center grid-col-12 grid-col-tablet-6"> {% endcomment %}
+  <div class="hero-banner-body">
     <p>Je suis un développeur web noir, queer avec de fortes valeurs progressistes situé à {{page.city | escape}}&nbsp;(Montréal).
       Ma pratique est ancrée dans la création d'espaces numériques durables et
       accessibles servant les milieux locaux, activistes, communautaires et coopératifs. Je crois fermement que la technologie doit servir
@@ -22,10 +27,9 @@ city: Tiohtià:ke
     <p>Merci d'avoir pris le temps de visiter mon site web. J'espère que cet espace réflète les valeurs qui guident mon travail.
       Si vous êtes intéressé à collaborer, ou simplement à échanger des idées, je vous invite à me contacter.
     </p>
-    {% comment %} <a href="/a-propos" class="button button-brand button-xl margin-block-start-8">Contactez-moi</a> {% endcomment %}
-  </div>
-  <div class="grid-col-12 grid-col-tablet-6">
-    <img class="hero-banner-image" src="{{ "/assets/images/author-selfie.png" | relative_url }}" alt="Photo portrait de Paul Willy Jean" />
+    <div class="hero-banner-actions">
+      <a href="/a-propos" class="button button-brand button-xl">Contactez-moi</a>
+    </div>
   </div>
 </div>
 <h2>Qui suis-je?</h2>
